@@ -7,9 +7,11 @@ pipeline {
         label 'master'
         }
     stages {
-        steps {
-                echo "====== triggers =========="
-        }    
+        stage (" A "){
+            steps {
+              echo "====== triggers =========="
+            }    
+        }
     }
     triggers { pollSCM('* * * * *') }
     options {
