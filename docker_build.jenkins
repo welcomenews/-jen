@@ -6,9 +6,11 @@ pipeline {
     agent { 
         label 'master'
         }
-    steps {
-        echo "====== triggers =========="
-    }    
+    stages {
+        steps {
+                echo "====== triggers =========="
+        }    
+    }
     triggers { pollSCM('* * * * *') }
     options {
         buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
