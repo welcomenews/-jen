@@ -13,7 +13,9 @@ pipeline {
     }
     stages {
         stage (" A "){
-            echo "========== ADD Trigger =========="
+            steps {
+                echo "========== ADD Trigger =========="
+            }    
         }    
     }    
     stages {
