@@ -1,5 +1,5 @@
 FROM ubuntu
-RUN  apt install py-pip 
+RUN  apt-get install py-pip -y
 RUN echo "ACCEPT"
-RUN apt --purge -v py-pip
+RUN apt-get purge -v py-pip
 CMD tail -f /dev/null
