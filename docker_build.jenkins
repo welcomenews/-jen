@@ -12,7 +12,9 @@ pipeline {
         timestamps()
     }
     stages {
-        echo "========== ADD Trigger =========="
+        stage (" A "){
+            echo "========== ADD Trigger =========="
+        }    
     }    
     stages {
         stage("create docker image") {
