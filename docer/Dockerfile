@@ -1,4 +1,5 @@
 FROM ubuntu
-RUN  apt install py-pip &&  pip install awscli
-RUN apt --purge -v del py-pip
+RUN  apt install py-pip 
+RUN echo "ACCEPT"
+RUN apt --purge -v py-pip
 CMD tail -f /dev/null
