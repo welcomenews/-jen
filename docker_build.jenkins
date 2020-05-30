@@ -37,6 +37,6 @@ pipeline {
                 //docker push semaev/toolbox:latest
                 //'''
             //}
-        }
+        //}
     }
 }
