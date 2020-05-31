@@ -13,7 +13,7 @@ pipeline {
     }
                
     stages {
-        stage (docker login) {
+        stage ("docker login") {
             steps {
                 echo "============ Docker login ================"
                 withCredentials([usernamePassword(credentialsId: 'dockerhub_isa', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
@@ -36,7 +36,7 @@ pipeline {
                 }
             }
         }
-        stage (docker push) {
+        stage ("docker push") {
             steps {
                 echo " ============= Start pushing images =========== "
                 sh '''
