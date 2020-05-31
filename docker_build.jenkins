@@ -36,13 +36,13 @@ pipeline {
                 }
             }
         }
-        stage ("docker push") {
-            steps {
-                echo " ============= Start pushing images =========== "
-                sh '''
-                docker push welcomenews/docer:latest
-                '''
-            }    
-        }    
+        //stage ("docker push") {
+          //  steps {
+            //    echo " ============= Start pushing images =========== "
+              //  sh '''
+              //  docker push welcomenews/docer:latest
+              //  '''
+           // }    
+        //}    
     }
 }
