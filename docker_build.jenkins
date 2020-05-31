@@ -13,16 +13,16 @@ pipeline {
     }
                
     stages {
-        stage ("docker login") {
-            steps {
-                echo "============ Docker login ================"
-                withCredentials([usernamePassword(credentialsId: 'dockerhub_isa', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-                   sh """
-                   docker login -u $USERNAME -p $PASSWORD
-                   """
-                }   
-            }   
-        }    
+        //stage ("docker login") {
+        //    steps {
+        //        echo "============ Docker login ================"
+        //        withCredentials([usernamePassword(credentialsId: 'dockerhub_isa', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+        //           sh """
+        //           docker login -u $USERNAME -p $PASSWORD
+        //          """
+        //        }   
+        //    }   
+        //}    
         stage (" A "){
             steps {
                 echo "========== ADD Trigger =========="
