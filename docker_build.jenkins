@@ -23,7 +23,7 @@ pipeline {
             steps {
                 echo " ============== start building image =================="
                 dir ('docer') {
-                	sh 'docker build . '
+                	sh 'docker build -t docer:latest . '
                 }
             }
         }
